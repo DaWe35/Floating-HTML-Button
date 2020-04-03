@@ -1,15 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 :root {
-    --main-color: #450E15;
-    --lighter-shade: #501920;
-    --num-color: #ddbabe;
+    --call-now-main-color: #450E15;
+    --call-now-lighter-shade: #501920;
+    --call-now-num-color: #ddbabe;
 }
 
-.container {
+.call-now-container {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -21,14 +16,14 @@
   margin: 10px;
 }
 
-.card {   
-    background-color: var(--main-color);
+.call-now-container .call-now-card {   
+    background-color: var(--call-now-main-color);
     color: white;
     border-radius: 10px;
     flex: 1;
     margin: 5px;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,32 +31,44 @@
     pointer-events: none;
 }
 
-.appointment {
+.call-now-container .call-now-card h4 {
+    margin-top: 0px;
+}
+
+.call-now-container .button-container {
+    width: 100%;
+    text-align: right;
+}
+
+.call-now-container .call-now-appointment {
     all: unset;
     position: relative;
     overflow: hidden;
     text-align: center;
     height: 1.5em;
-    width: 100%;   
-    padding: 15px 0 15px 0;
-    background-color: var(--main-color);
+    padding: 10px 20px;
+    width: 220px;
+    background-color: var(--call-now-main-color);
     color: white;
     border-radius: 100px;
-    -moz-transition: border-radius 1s, width 1s, padding 1s;
-    -webkit-transition: border-radius 1s, width 1s, padding 1s;
-    transition: border-radius 1s, width 1s, padding 1s;
+    -moz-transition: border-radius 0.3s, width 0.3s, padding 0.3s;
+    -webkit-transition: border-radius 0.3s, width 0.3s, padding 0.3s;
+    transition: border-radius 0.3s, width 0.3s, padding 0.3s;
     margin-top: 5px;
     margin-bottom: 5px;
     white-space: nowrap;
     cursor: pointer;
+    font-weight: bold;
+    letter-spacing: .05em;
+    font-size: 120%;
 }
 
-.content {
+.call-now-container .content {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;    
 }
 
-.cross {
+.call-now-container .cross {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,36 +85,33 @@
     100% {transform: rotate(0deg);}
 }
 
-@font-face {
-    font-family: "Trajan";
-    src : url("./Trajan.ttf");
-}
-
-.ring {
+.call-now-container .ring {
     animation: ringing 0.5s ease-in-out 2s;
 }
 
-.num {
+.call-now-container .num,
+.call-now-container .num:hover,
+.call-now-container .num:focus {
     text-decoration: none;
-    background-color: var(--lighter-shade);
-    color: var(--num-color);
+    background-color: var(--call-now-lighter-shade);
+    color: var(--call-now-num-color);
     padding: 5px 20px 5px 20px;
     border-radius: 100px;
+    font-size: 140%;
+    font-weight: bold;
 }
 
-.num:hover {
-    text-decoration: none;
-    color: var(--num-color);
-}
-
-i {
+.call-now-container i {
     margin-right: 10px;
 }
 
-p, .button-text, h4, .num {
-    font-family: 'Trajan';
+.call-now-container p,
+.call-now-container .button-text,
+.call-now-container h4,
+.call-now-container .num {
+    font-family: sans-serif;
 }
 
-h4 {
+.call-now-container h4 {
     font-weight: bold;
 }

@@ -14,6 +14,7 @@
   height: 40vh;
   width: 25vw;
   margin: 10px;
+  pointer-events: none;
 }
 
 .call-now-container .call-now-card {   
@@ -38,6 +39,7 @@
 .call-now-container .button-container {
     width: 100%;
     text-align: right;
+    pointer-events: all;
 }
 
 .call-now-container .call-now-appointment {
